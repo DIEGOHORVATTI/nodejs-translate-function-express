@@ -3,8 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "ts-node api/translate.ts",
-    "build": "tsc"
+    "dev": "ts-node api/translate.ts"
   },
   "devDependencies": {
     "@types/node": "^17.0.42",
