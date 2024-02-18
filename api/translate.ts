@@ -1,6 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-import { translate } from '@vitalets/google-translate-api';
+import translatte from 'translatte';
+
+import { Translate } from './type';
 
 type RequestData = {
   text: string;
@@ -15,13 +17,13 @@ export default async function handler(
 ) {
   const { text, to } = req.query;
 
-  try {
-    const { text: translatedText } = await translate(text, { to });
-
-    res.json({
-      message: translatedText
+  await translatte(text, { to })
+    .then((data: Translate) => {
+      res.json({
+        message: data.text
+      });
+    })
+    .catch((error: Array<string>) => {
+      res.status(500).send(`Error: ${JSON.stringify(error)}`);
     });
-  } catch (error: any) {
-    res.status(500).send(`Error: ${error.toString()}`);
-  }
 }

@@ -11,6 +11,6 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
-    "@vitalets/google-translate-api": "^9.2.0"
+    "translatte": "^3.0.1"
   }
 }
