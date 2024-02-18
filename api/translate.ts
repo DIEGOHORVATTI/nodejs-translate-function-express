@@ -28,14 +28,14 @@ app.get(
 
     try {
       const data: Translate = await translatte(text, { to });
-      console.log(data);
+
       res.json({
         message: data.text
       });
     } catch (error) {
-      console.log(error);
-
-      res.status(500).send(`Error: ${JSON.stringify(error)}`);
+      res.status(500).send({
+        error
+      });
     }
   }
 );
