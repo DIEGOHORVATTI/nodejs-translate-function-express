@@ -17,6 +17,7 @@ const corsOptions = {
 
 type RequestData = {
   text: string;
+  from: string;
   to: string;
 };
 
@@ -24,10 +25,10 @@ app.get(
   '/api/translate',
   cors(corsOptions),
   async (req: Request, res: Response) => {
-    const { text, to } = req.query as RequestData;
+    const { text, to, from } = req.query as RequestData;
 
     try {
-      const data: Translate = await translatte(text, { to });
+      const data: Translate = await translatte(text, { to, from });
 
       res.json({
         message: data.text

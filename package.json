@@ -3,7 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "ts-node api/translate.ts"
+    "dev": "bun api/translate.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
