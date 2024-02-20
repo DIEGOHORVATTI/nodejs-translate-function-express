@@ -20,10 +20,8 @@
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
-    "useUnknownInCatchVariables": false,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "useUnknownInCatchVariables": false
   },
+  "include": ["./api/Translatte.d.ts"],
   "exclude": ["node_modules"]
 }

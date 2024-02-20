@@ -2,10 +2,9 @@
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
   "private": true,
-  "main": "index.ts",
+  "main": "api/index.ts",
   "scripts": {
-    "start": "bun api/translate.ts",
-    "dev": "ts-node-dev --respawn --transpileOnly api/translate.ts",
+    "start": "ts-node ./api/index.ts",
     "build": "tsc"
   },
   "devDependencies": {
