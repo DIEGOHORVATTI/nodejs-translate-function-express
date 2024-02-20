@@ -3,8 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "bun api/translate.ts",
-    "build": "bun build ./api/index.ts --outdir index.js"
+    "start": "bun api/translate.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
