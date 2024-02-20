@@ -21,6 +21,8 @@ type RequestData = {
   to: string;
 };
 
+// adicionar verificação de token
+
 app.get(
   '/api/translate',
   cors(corsOptions),
