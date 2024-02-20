@@ -34,7 +34,8 @@ app.get(
         message: data.text
       });
     } catch (error) {
-      res.status(500).send({
+      res.status(200).send({
+        message: '',
         error
       });
     }
