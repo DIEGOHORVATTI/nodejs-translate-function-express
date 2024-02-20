@@ -2,8 +2,11 @@
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
   "private": true,
+  "main": "index.ts",
   "scripts": {
-    "start": "bun api/translate.ts"
+    "start": "bun api/translate.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly api/translate.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
