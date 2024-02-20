@@ -2,7 +2,8 @@
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
   "private": true,
-  "main": "api/index.ts",
+  "main": "api/index",
+  "types": "types",
   "scripts": {
     "start": "ts-node ./api/index.ts",
     "build": "tsc"
